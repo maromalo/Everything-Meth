@@ -31,7 +31,7 @@
 	"everythingmeth_done" : "Meta completa!",
 	"everythingmeth_fail" : "Ingrediente errado!",
 	"everythingmeth_toggled_true" : "Habilitar o ajudante de metanfetamina",
-	"everythingmeth_toggled_false" : "Desabilitar o ajudante de metanfetamina"
+	"everythingmeth_toggled_false" : "Desabilitar o ajudante de metanfetamina",
 	"everythingmeth_remove_blur_toggle_title" : "Remove Blur",
 	"everythingmeth_remove_blur_toggle_desc" : "Whether Everything Meth removes the blurry effect near the labs (requires map restart)",
 	"everythingmeth_meth_manager_toggle_enabled_title" : "Meth Manager",

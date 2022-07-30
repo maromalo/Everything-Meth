@@ -31,7 +31,7 @@
 	"everythingmeth_done" : "Parça tamamlandı",
 	"everythingmeth_fail" : "Pişirme Başarısız",
 	"everythingmeth_toggled_true" : "Everything Meth Açıldı",
-	"everythingmeth_toggled_false" : "Everything Meth Kapatıldı"
+	"everythingmeth_toggled_false" : "Everything Meth Kapatıldı",
 	"everythingmeth_remove_blur_toggle_title" : "Remove Blur",
 	"everythingmeth_remove_blur_toggle_desc" : "Whether Everything Meth removes the blurry effect near the labs (requires map restart)",
 	"everythingmeth_meth_manager_toggle_enabled_title" : "Meth Manager",

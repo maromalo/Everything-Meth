@@ -31,7 +31,7 @@
 	"everythingmeth_done" : "Gomila droge je završena",
 	"everythingmeth_fail" : "Pogrešan sastojak je dodat",
 	"everythingmeth_toggled_true" : "Enabled Everything Meth",
-	"everythingmeth_toggled_false" : "Disabled Everything Meth"
+	"everythingmeth_toggled_false" : "Disabled Everything Meth",
 	"everythingmeth_remove_blur_toggle_title" : "Remove Blur",
 	"everythingmeth_remove_blur_toggle_desc" : "Whether Everything Meth removes the blurry effect near the labs (requires map restart)",
 	"everythingmeth_meth_manager_toggle_enabled_title" : "Meth Manager",

@@ -31,7 +31,7 @@
 	"everythingmeth_done" : "Fournée Complète",
 	"everythingmeth_fail" : "Mauvais Ingrédient! Félicitation!",
 	"everythingmeth_toggled_true" : "Activer Everything Meth",
-	"everythingmeth_toggled_false" : "Désactiver Everything Meth"
+	"everythingmeth_toggled_false" : "Désactiver Everything Meth",
 	"everythingmeth_remove_blur_toggle_title" : "Remove Blur",
 	"everythingmeth_remove_blur_toggle_desc" : "Whether Everything Meth removes the blurry effect near the labs (requires map restart)",
 	"everythingmeth_meth_manager_toggle_enabled_title" : "Meth Manager",

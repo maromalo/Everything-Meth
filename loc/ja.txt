@@ -31,7 +31,7 @@
     "everythingmeth_done" : "製造完了",
     "everythingmeth_fail" : "材料ミス！",
     "everythingmeth_toggled_true" : "Everything Methを有効化",
-    "everythingmeth_toggled_false" : "Everything Methを無効化"
+    "everythingmeth_toggled_false" : "Everything Methを無効化",
 	"everythingmeth_remove_blur_toggle_title" : "Remove Blur",
 	"everythingmeth_remove_blur_toggle_desc" : "Whether Everything Meth removes the blurry effect near the labs (requires map restart)",
 	"everythingmeth_meth_manager_toggle_enabled_title" : "Meth Manager",

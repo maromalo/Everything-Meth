@@ -31,7 +31,7 @@
 	"everythingmeth_done" : "마약 제조가 완료되었습니다",
 	"everythingmeth_fail" : "잘못된 재료를 넣었습니다!",
 	"everythingmeth_toggled_true" : "마약 도우미를 활성화 시켰습니다",
-	"everythingmeth_toggled_false" : "마약 도우미를 비활성화 시켰습니다"
+	"everythingmeth_toggled_false" : "마약 도우미를 비활성화 시켰습니다",
 	"everythingmeth_remove_blur_toggle_title" : "Remove Blur",
 	"everythingmeth_remove_blur_toggle_desc" : "Whether Everything Meth removes the blurry effect near the labs (requires map restart)",
 	"everythingmeth_meth_manager_toggle_enabled_title" : "Meth Manager",

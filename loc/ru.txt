@@ -31,7 +31,7 @@
 	"everythingmeth_done" : "Мет готов!",
 	"everythingmeth_fail" : "НЕВЕРНЫЙ РЕАГЕНТ!",
 	"everythingmeth_toggled_true" : "Включен Everything Meth",
-	"everythingmeth_toggled_false" : "Выключен Everything Meth"
+	"everythingmeth_toggled_false" : "Выключен Everything Meth",
 	"everythingmeth_remove_blur_toggle_title" : "Remove Blur",
 	"everythingmeth_remove_blur_toggle_desc" : "Whether Everything Meth removes the blurry effect near the labs (requires map restart)",
 	"everythingmeth_meth_manager_toggle_enabled_title" : "Meth Manager",

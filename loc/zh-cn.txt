@@ -31,7 +31,7 @@
     "everythingmeth_done" : "煮盐完成",
     "everythingmeth_fail" : "添加了错误的材料!",
     "everythingmeth_toggled_true" : "启用 煮盐提示",
-    "everythingmeth_toggled_false" : "关闭 煮盐提示"
+    "everythingmeth_toggled_false" : "关闭 煮盐提示",
 	"everythingmeth_remove_blur_toggle_title" : "Remove Blur",
 	"everythingmeth_remove_blur_toggle_desc" : "Whether Everything Meth removes the blurry effect near the labs (requires map restart)",
 	"everythingmeth_meth_manager_toggle_enabled_title" : "Meth Manager",
