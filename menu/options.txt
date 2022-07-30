@@ -183,19 +183,6 @@
 			"description" : "everythingmeth_anti_spam_toggle_desc",
 			"callback" : "callback_everythingmeth_anti_spam_toggle",
 			"value" : "anti_spam"
-		},
-		{
-			"type" : "multiple_choice",
-			"id" : "everythingmeth_message_prefix",
-			"title" : "everythingmeth_message_prefix_title",
-			"description" : "everythingmeth_message_prefix_desc",
-			"callback" : "callback_everythingmeth_message_prefix",
-			"items" : [
-				"everythingmeth_message_prefix_a",
-				"everythingmeth_message_prefix_b",
-				"everythingmeth_message_prefix_c"
-			],
-			"value" : "message_prefix"
 		}
 	]
 }

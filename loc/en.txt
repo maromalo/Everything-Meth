@@ -42,10 +42,5 @@
 	"everythingmeth_ingred_contours_toggle_title" : "Ingredient Contours",
 	"everythingmeth_ingred_contours_toggle_desc" : "Whether Everything Meth adds a contour to the ingredients (requires game restart)",
 	"everythingmeth_anti_spam_toggle_title" : "Anti Spam",
-	"everythingmeth_anti_spam_toggle_desc" : "Whether Everything Meth should block other Meth Helper-like messages from your peers.",
-	"everythingmeth_message_prefix_title" : "Public Message Prefix",
-	"everythingmeth_message_prefix_desc" : "Under what name should Everything Meth send public messages",
-	"everythingmeth_message_prefix_a" : "Everything Meth",
-	"everythingmeth_message_prefix_b" : "(Your name)",
-	"everythingmeth_message_prefix_c" : "Meth Helper"
+	"everythingmeth_anti_spam_toggle_desc" : "Whether Everything Meth should block other Meth Helper-like messages from your peers."
 }

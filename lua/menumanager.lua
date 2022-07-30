@@ -20,7 +20,6 @@ EverythingMeth.settings = {
 	ingred_lines = true,
 	ingred_contours = false,
 	anti_spam = false,
-	message_prefix = 1,
 	language_name = "en.txt",
 	_language_index = 2 --don't bother changing this, it doesn't do anything except VISUALLY change which language is selected in the multiple choice menu
 }
@@ -279,12 +278,6 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_EverythingMeth", func
 	MenuCallbackHandler.callback_everythingmeth_anti_spam_toggle = function(self,item)
 		local value = item:value() == "on"
 		EverythingMeth.settings.anti_spam = value
-		EverythingMeth:Save()
-	end
-
-	MenuCallbackHandler.callback_everythingmeth_message_prefix = function(self,item)
-		local value = tonumber(item:value())
-		EverythingMeth.settings.message_prefix = value
 		EverythingMeth:Save()
 	end
 	
