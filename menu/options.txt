@@ -1,0 +1,201 @@
+{
+	"menu_id" : "everythingmeth_options",
+	"parent_menu_id" : "blt_options",
+	"title" : "everythingmeth_title",
+	"back_callback" : "callback_everythingmeth_close",
+	"focus_changed_callback" : "callback_everythingmeth_refocus",
+	"items" : [
+		{
+			"type" : "toggle",
+			"id" : "everythingmeth_toggle_enabled",
+			"title" : "everythingmeth_toggle_enabled_title",
+			"description" : "everythingmeth_toggle_enabled_desc",
+			"callback" : "callback_everythingmeth_toggle_enabled",
+			"value" : "enabled"
+		},
+		{
+			"type" : "multiple_choice",
+			"id" : "everythingmeth_select_language",
+			"title" : "everythingmeth_select_language_title",
+			"description" : "everythingmeth_select_language_desc",
+			"callback" : "callback_everythingmeth_select_language",
+			"items" : [],
+			"value" : "_language_index"
+		},
+		{
+			"type" : "keybind",
+			"id" : "everythingmeth_keybind_toggle",
+			"title" : "everythingmeth_keybind_toggle_title",
+			"description" : "everythingmeth_keybind_toggle_desc",
+			"keybind_id" : "everythingmeth_keybind_toggle_enabled",
+			"run_in_game" : true,
+			"run_in_menu" : false,
+			"func" : "callback_everythingmeth_keybind_toggle"
+		},
+		{
+			"type" : "divider",
+			"size" : 24
+		},
+		{
+			"type" : "multiple_choice",
+			"id" : "everythingmeth_ingred_chatmode",
+			"title" : "everythingmeth_ingred_chatmode_title",
+			"description" : "everythingmeth_chatmode_desc",
+			"callback" : "callback_everythingmeth_ingred_chatmode",
+			"items" : [
+				"everythingmeth_chatmode_a",
+				"everythingmeth_chatmode_b",
+				"everythingmeth_chatmode_c"
+			],
+			"value" : "ingred_chatmode"
+		},
+		{
+			"type" : "toggle",
+			"id" : "everythingmeth_ingred_hintmode",
+			"title" : "everythingmeth_ingred_hintmode_title",
+			"description" : "everythingmeth_hintmode_desc",
+			"callback" : "callback_everythingmeth_ingred_hintmode",
+			"value" : "ingred_hintmode"
+		},
+		{
+			"type" : "toggle",
+			"id" : "everythingmeth_ingred_repeat",
+			"title" : "everythingmeth_ingred_repeat_title",
+			"description" : "everythingmeth_ingred_repeat_desc",
+			"callback" : "callback_everythingmeth_ingred_repeat",
+			"value" : "ingred_repeat"
+		},
+		{
+			"type" : "divider",
+			"size" : 16
+		},
+		{
+			"type" : "multiple_choice",
+			"id" : "everythingmeth_added_chatmode",
+			"title" : "everythingmeth_added_chatmode_title",
+			"description" : "everythingmeth_chatmode_desc",
+			"callback" : "callback_everythingmeth_added_chatmode",
+			"items" : [
+				"everythingmeth_chatmode_a",
+				"everythingmeth_chatmode_b",
+				"everythingmeth_chatmode_c"
+			],
+			"value" : "added_chatmode"
+		},
+		{
+			"type" : "toggle",
+			"id" : "everythingmeth_added_hintmode",
+			"title" : "everythingmeth_added_hintmode_title",
+			"description" : "everythingmeth_hintmode_desc",
+			"callback" : "callback_everythingmeth_added_hintmode",
+			"value" : "added_hintmode"
+		},
+		{
+			"type" : "divider",
+			"size" : 16
+		},
+		{
+			"type" : "multiple_choice",
+			"id" : "everythingmeth_done_chatmode",
+			"title" : "everythingmeth_done_chatmode_title",
+			"description" : "everythingmeth_chatmode_desc",
+			"callback" : "callback_everythingmeth_done_chatmode",
+			"items" : [
+				"everythingmeth_chatmode_a",
+				"everythingmeth_chatmode_b",
+				"everythingmeth_chatmode_c"
+			],
+			"value" : "done_chatmode"
+		},
+		{
+			"type" : "toggle",
+			"id" : "everythingmeth_done_hintmode",
+			"title" : "everythingmeth_done_hintmode_title",
+			"description" : "everythingmeth_hintmode_desc",
+			"callback" : "callback_everythingmeth_done_hintmode",
+			"value" : "done_hintmode"
+		},
+		{
+			"type" : "divider",
+			"size" : 16
+		},
+		{
+			"type" : "multiple_choice",
+			"id" : "everythingmeth_fail_chatmode",
+			"title" : "everythingmeth_fail_chatmode_title",
+			"description" : "everythingmeth_chatmode_desc",
+			"callback" : "callback_everythingmeth_fail_chatmode",
+			"items" : [
+				"everythingmeth_chatmode_a",
+				"everythingmeth_chatmode_b",
+				"everythingmeth_chatmode_c"
+			],
+			"value" : "fail_chatmode"
+		},
+		{
+			"type" : "toggle",
+			"id" : "everythingmeth_fail_hintmode",
+			"title" : "everythingmeth_fail_hintmode_title",
+			"description" : "everythingmeth_hintmode_desc",
+			"callback" : "callback_everythingmeth_fail_hintmode",
+			"value" : "fail_hintmode"
+		},
+		{
+			"type": "divider",
+			"size": 16	
+		},
+		{
+			"type" : "toggle",
+			"id" : "everythingmeth_remove_blur_toggle",
+			"title" : "everythingmeth_remove_blur_toggle_title",
+			"description": "everythingmeth_remove_blur_toggle_desc",
+			"callback" : "callback_everythingmeth_remove_blur_toggle",
+			"value" : "remove_blur"
+		},
+		{
+			"type" : "toggle",
+			"id" : "everythingmeth_meth_manager_toggle_enabled",
+			"title" : "everythingmeth_meth_manager_toggle_enabled_title",
+			"description" : "everythingmeth_meth_manager_toggle_enabled_desc",
+			"callback" : "callback_everythingmeth_meth_manager_toggle_enabled",
+			"value" : "meth_manager_enabled"
+		},
+		{
+			"type" : "toggle",
+			"id" : "everythingmeth_ingred_lines_toggle",
+			"title" : "everythingmeth_ingred_lines_toggle_title",
+			"description" : "everythingmeth_ingred_lines_toggle_desc",
+			"callback" : "callback_everythingmeth_ingred_lines_toggle",
+			"value" : "ingred_lines"
+		},
+		{
+			"type" : "toggle",
+			"id" : "everythingmeth_ingred_contours_toggle",
+			"title" : "everythingmeth_ingred_contours_toggle_title",
+			"description" : "everythingmeth_ingred_contours_toggle_desc",
+			"callback": "callback_everythingmeth_ingred_contours_toggle",
+			"value" : "ingred_contours"
+		},
+		{
+			"type" : "toggle",
+			"id" : "everythingmeth_anti_spam_toggle",
+			"title" : "everythingmeth_anti_spam_toggle_title",
+			"description" : "everythingmeth_anti_spam_toggle_desc",
+			"callback" : "callback_everythingmeth_anti_spam_toggle",
+			"value" : "anti_spam"
+		},
+		{
+			"type" : "multiple_choice",
+			"id" : "everythingmeth_message_prefix",
+			"title" : "everythingmeth_message_prefix_title",
+			"description" : "everythingmeth_message_prefix_desc",
+			"callback" : "callback_everythingmeth_message_prefix",
+			"items" : [
+				"everythingmeth_message_prefix_a",
+				"everythingmeth_message_prefix_b",
+				"everythingmeth_message_prefix_c"
+			],
+			"value" : "message_prefix"
+		}
+	]
+}
