@@ -72,12 +72,12 @@ function DialogManager:queue_dialog(id, ...)
 	if output then 
 		local private_prefix = "[" .. EverythingMeth:LocalizeLine("prefix") .. "]"
 		local color = Color("5FE1FF") --cyan
-		if chatmode == 1 then 
+		if chatmode == 3 then 
+			--nothing
+		elseif chatmode == 1 or (EverythingMeth.settings.host_only_pmsg and not _G.LuaNetworking:IsHost()) then 
 			managers.chat:_receive_message(1,private_prefix,output,color)
 		elseif chatmode == 2 then 
 			managers.chat:send_message(ChatManager.GAME, managers.network.account:username() or "Offline", EverythingMeth.settings.msg_prefix .. output)
-		elseif chatmode == 3 then 
-			--nothing
 		end
 		if hintmode then 
 			managers.hud:show_hint({text = output})

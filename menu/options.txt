@@ -158,6 +158,14 @@
 			"value" : "msg_prefix_mode"
 		},
 		{
+			"type" : "toggle",
+			"id" : "everythingmeth_host_only_public_msg",
+			"title" : "everythingmeth_host_only_public_msg_title",
+			"description" : "everythingmeth_host_only_public_msg_desc",
+			"callback" : "callback_everythingmeth_host_only_public_msg",
+			"value" : "host_only_pmsg"
+		},
+		{
 			"type": "divider",
 			"size": 16	
 		},

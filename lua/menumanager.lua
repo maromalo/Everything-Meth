@@ -22,6 +22,7 @@ EverythingMeth.settings = {
 	anti_spam = false,
 	msg_prefix_mode = 3,
 	msg_prefix = "",
+	host_only_pmsg = true,
 	language_name = "en.txt",
 	_language_index = 2 --don't bother changing this, it doesn't do anything except VISUALLY change which language is selected in the multiple choice menu
 }
@@ -291,6 +292,35 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_EverythingMeth", func
 		EverythingMeth:Save()
 	end
 
+	MenuCallbackHandler.callback_everythingmeth_host_only_public_msg = function(self,item)
+		local value = item:value() == "on"
+		if not value then
+			QuickMenu:new(
+				EverythingMeth:LocalizeLine("host_only_public_msg_title"),
+				EverythingMeth:LocalizeLine("host_only_public_msg_warning"),
+				{
+					{
+						text = EverythingMeth:LocalizeLine("disable"),
+						callback = function ()
+							EverythingMeth.settings.host_only_pmsg = value
+						end
+					},
+					{
+						text = EverythingMeth:LocalizeLine("cancel"),
+						callback = function ()
+							MenuHelper:ResetItemsToDefaultValue(
+								item,
+								{ ["everythingmeth_host_only_public_msg"] = true },
+								true)
+						end
+					}
+				},
+				true
+			)
+		else
+			EverythingMeth.settings.host_only_pmsg = value
+		end
+	end
 	MenuCallbackHandler.callback_everythingmeth_close = function(self)
 --		EverythingMeth:Save() --redundant since the mod saves after any setting change
 	end
