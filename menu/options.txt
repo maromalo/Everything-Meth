@@ -145,6 +145,23 @@
 			"size": 16	
 		},
 		{
+			"type" : "multiple_choice",
+			"id" : "everythingmeth_msg_prefix_mode",
+			"title" : "everythingmeth_msg_prefix_mode_title",
+			"description" : "everythingmeth_msg_prefix_mode_desc",
+			"callback" : "callback_everythingmeth_msg_prefix_mode",
+			"items" : [
+				"everythingmeth_msg_prefix_a",
+				"everythingmeth_msg_prefix_b",
+				"everythingmeth_msg_prefix_c"
+			],
+			"value" : "msg_prefix_mode"
+		},
+		{
+			"type": "divider",
+			"size": 16	
+		},
+		{
 			"type" : "toggle",
 			"id" : "everythingmeth_remove_blur_toggle",
 			"title" : "everythingmeth_remove_blur_toggle_title",

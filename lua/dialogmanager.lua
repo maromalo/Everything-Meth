@@ -70,12 +70,12 @@ function DialogManager:queue_dialog(id, ...)
 	end
 	
 	if output then 
-		local prefix = "[" .. EverythingMeth:LocalizeLine("prefix") .. "]"
+		local private_prefix = "[" .. EverythingMeth:LocalizeLine("prefix") .. "]"
 		local color = Color("5FE1FF") --cyan
 		if chatmode == 1 then 
-			managers.chat:_receive_message(1,prefix,output,color)
+			managers.chat:_receive_message(1,private_prefix,output,color)
 		elseif chatmode == 2 then 
-			managers.chat:send_message(ChatManager.GAME, managers.network.account:username() or "Offline", output)
+			managers.chat:send_message(ChatManager.GAME, managers.network.account:username() or "Offline", EverythingMeth.settings.msg_prefix .. output)
 		elseif chatmode == 3 then 
 			--nothing
 		end

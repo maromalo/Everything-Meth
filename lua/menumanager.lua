@@ -20,6 +20,8 @@ EverythingMeth.settings = {
 	ingred_lines = true,
 	ingred_contours = false,
 	anti_spam = false,
+	msg_prefix_mode = 3,
+	msg_prefix = "",
 	language_name = "en.txt",
 	_language_index = 2 --don't bother changing this, it doesn't do anything except VISUALLY change which language is selected in the multiple choice menu
 }
@@ -281,6 +283,14 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_EverythingMeth", func
 		EverythingMeth:Save()
 	end
 	
+	MenuCallbackHandler.callback_everythingmeth_msg_prefix_mode = function(self,item)
+		local value = tonumber(item:value())
+		local prefix_table = {"[Everything Meth]: ", "[Meth Helper]: ", ""}
+		EverythingMeth.settings.msg_prefix_mode = value
+		EverythingMeth.settings.msg_prefix = prefix_table[value]
+		EverythingMeth:Save()
+	end
+
 	MenuCallbackHandler.callback_everythingmeth_close = function(self)
 --		EverythingMeth:Save() --redundant since the mod saves after any setting change
 	end
