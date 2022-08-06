@@ -1,5 +1,5 @@
 <mod name="Everything Meth" author="Maromalo" core_class="lua\menumanager.lua" color="Color(0,0.6,0.9)">
-	<AssetUpdates id="38500" version="1.11" provider="modworkshop" install_directory = "mods/" version_is_number="true"/>
+	<AssetUpdates id="38500" version="1.2" provider="modworkshop" install_directory = "mods/" version_is_number="true"/>
     <AddFiles directory="contours" use_clbk="EverythingMeth:UseClbk">
         <material_config path="units\payday2\pickups\gen_pku_methlab_caustic_soda\gen_pku_methlab_caustic_soda"/>
         <material_config path="units\payday2\pickups\gen_pku_methlab_hydrogen_cloride\gen_pku_methlab_hydrogen_cloride"/>

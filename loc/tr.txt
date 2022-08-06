@@ -42,5 +42,15 @@
 	"everythingmeth_ingred_contours_toggle_title" : "Ingredient Contours",
 	"everythingmeth_ingred_contours_toggle_desc" : "Whether Everything Meth adds a contour to the ingredients (requires game restart)",
 	"everythingmeth_anti_spam_toggle_title" : "Anti Spam",
-	"everythingmeth_anti_spam_toggle_desc" : "Whether Everything Meth should block other Meth Helper-like messages from your peers."
+	"everythingmeth_anti_spam_toggle_desc" : "Whether Everything Meth should block other Meth Helper-like messages from your peers.",
+	"everythingmeth_msg_prefix_mode_title" : "Public Message Prefix",
+	"everythingmeth_msg_prefix_mode_desc" : "Which prefix should Everything Meth use when sending public messages",
+	"everythingmeth_msg_prefix_a" : "Everything Meth",
+	"everythingmeth_msg_prefix_b" : "Meth Helper",
+	"everythingmeth_msg_prefix_c" : "Off",
+	"everythingmeth_host_only_public_msg_title" : "Host-Only public messages",
+	"everythingmeth_host_only_public_msg_desc" : "Everything Meth will only send public messages if you are the game's host.",
+	"everythingmeth_host_only_public_msg_warning" : "Unless the host specifically asks you to, you should leave this option turned on. This helps with reducing chat spam AND allowing the host to cook in the way that they want, with or without a Meth Helper. Please respect the host's choice. Thank you.",
+	"everythingmeth_disable" : "Disable",
+	"everythingmeth_cancel" : "Cancel"
 }
