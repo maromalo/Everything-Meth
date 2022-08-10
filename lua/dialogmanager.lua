@@ -6,6 +6,7 @@ local dialog_ids = {
 	["pln_rt1_22"] = "cs",
 	["pln_rt1_24"] = "hcl",
 	["pln_rt1_28"] = "added",
+	["Play_pln_nai_09"] = "done",
 	["Play_pln_nai_16"] = "fail", --this and 15 both play on lab rats, not sure which i should use. 16 seems to only play on lab rats
 	["pln_rat_stage1_20"] = "mu",
 	["pln_rat_stage1_22"] = "cs",
