@@ -32,7 +32,7 @@ EverythingMeth.languages = {} --populated later
 
 EverythingMeth.path = ModPath
 EverythingMeth.loc_path = EverythingMeth.path .. "loc/"
-EverythingMeth.save_path = SavePath .. "everythingmeth.txt"
+EverythingMeth.save_path = SavePath .. "everythingmeth.json"
 
 EverythingMeth._last_ingredient = "Fish-shaped volatile organic compounds and sediment-shaped sediment" --placeholder
 
