@@ -1,6 +1,7 @@
 14/8/22 - v1.21
 - Ingredient Contours no longer needs BeardLib, and only requires a map restart
 - Added BLT updates
+- Added Lab Rats batch complete line (should fix some issues)
 
 06/8/22 - v1.2
 - Added Public Message prefixes
