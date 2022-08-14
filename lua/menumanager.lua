@@ -33,6 +33,7 @@ EverythingMeth.languages = {} --populated later
 EverythingMeth.path = ModPath
 EverythingMeth.loc_path = EverythingMeth.path .. "loc/"
 EverythingMeth.save_path = SavePath .. "everythingmeth.json"
+EverythingMeth.contours_save_path = SavePath .. "everythingmeth_contours.txt"
 
 EverythingMeth._last_ingredient = "Fish-shaped volatile organic compounds and sediment-shaped sediment" --placeholder
 
@@ -45,6 +46,13 @@ function EverythingMeth:Load()
 	else
 		self:Save()
 	end
+
+	local contours_file = io.open(self.contours_save_path, "r")
+	if (contours_file) then
+		self.settings.ingred_contours = contours_file:read("*all") == "true"
+	else
+		self:Save()
+	end
 end
 
 function EverythingMeth:Save()
@@ -53,11 +61,12 @@ function EverythingMeth:Save()
 		file:write(json.encode(self.settings))
 		file:close()
 	end
-end
 
-function EverythingMeth:UseClbk() --wanted this to be on its own file, but apparently beardlib wasn't having it
-	EverythingMeth:Load()
-    return EverythingMeth.settings.ingred_contours
+	local contours_file = io.open(self.contours_save_path, "w+")
+	if contours_file then
+		contours_file:write(tostring(self.settings.ingred_contours))
+		contours_file:close()
+	end
 end
 
 function EverythingMeth:IsEnabled()

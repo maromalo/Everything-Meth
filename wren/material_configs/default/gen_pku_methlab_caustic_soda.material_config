@@ -1,0 +1,6 @@
+<materials version="3">
+    <material name="gen_pku_methlab_causticsoda_mat" version="2" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP">
+        <diffuse_texture file="units/payday2/pickups/gen_pku_methlab_caustic_soda/gen_pku_methlab_caustic_soda_df"/>
+		<bump_normal_texture file="units/payday2/pickups/gen_pku_methlab_caustic_soda/gen_pku_methlab_caustic_soda_nm"/>
+    </material>
+</materials>
