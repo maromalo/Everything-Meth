@@ -7,6 +7,14 @@
 	"blt_version" : 2,
 	"image" : "emsq.png",
 	"color" : "0 162 232",
+	"updates" : [
+		{
+			"identifier" : "everythingmeth",
+			"host": {
+				"meta": "https://github.com/maromalo/Everything-Meth/releases/latest/download/meta.json"
+			}
+		}
+	],
 	"hooks" : [
 		{
 			"hook_id" : "lib/managers/menumanager",

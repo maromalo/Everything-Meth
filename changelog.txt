@@ -1,0 +1,24 @@
+14/8/22 - v1.21
+- Ingredient Contours no longer needs BeardLib, and only requires a map restart
+- Added BLT updates
+- Added Lab Rats batch complete line (should fix some issues)
+
+06/8/22 - v1.2
+- Added Public Message prefixes
+- Added Host-Only Public Messages
+- Updated Anti Spam to work with the new prefixes
+- Fixed localization files
+
+16/7/22 -v1.11
+- Updated localization files to work with the previous update (i forgot lol)
+
+16/7/22 - v1.1
+- Added Anti Spam.
+- Removed testing log functions (whoops).
+- Added bruh comments
+
+15/7/22 - v1.01
+- BeardLib automatic updates should be set up now.
+
+15/7/22 - v1
+- I have cursed this world with yet another meth helper.
