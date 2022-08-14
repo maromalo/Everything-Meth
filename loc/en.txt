@@ -40,7 +40,7 @@
 	"everythingmeth_ingred_lines_toggle_title" : "Play Ingredient Lines",
 	"everythingmeth_ingred_lines_toggle_desc" : "Whether Bain and Locke should call out the ingredients",
 	"everythingmeth_ingred_contours_toggle_title" : "Ingredient Contours",
-	"everythingmeth_ingred_contours_toggle_desc" : "Whether Everything Meth adds a contour to the ingredients (requires game restart)",
+	"everythingmeth_ingred_contours_toggle_desc" : "Whether Everything Meth adds a contour to the ingredients (requires map restart)",
 	"everythingmeth_anti_spam_toggle_title" : "Anti Spam",
 	"everythingmeth_anti_spam_toggle_desc" : "Whether Everything Meth should block other Meth Helper-like messages from your peers.",
 	"everythingmeth_msg_prefix_mode_title" : "Public Message Prefix",

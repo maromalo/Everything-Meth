@@ -40,7 +40,7 @@
 	"everythingmeth_ingred_lines_toggle_title" : "Líneas de Ingredientes",
 	"everythingmeth_ingred_lines_toggle_desc" : "Bain y Locke dirán que ingredientes poner",
 	"everythingmeth_ingred_contours_toggle_title" : "Contorno de Ingredientes",
-	"everythingmeth_ingred_contours_toggle_desc" : "Everything Meth agregará un contorno a los ingredientes (requiere reiniciar el juego)",
+	"everythingmeth_ingred_contours_toggle_desc" : "Everything Meth agregará un contorno a los ingredientes (requiere reiniciar el mapa)",
 	"everythingmeth_anti_spam_toggle_title" : "Anti Spam",
 	"everythingmeth_anti_spam_toggle_desc" : "Whether Everything Meth should block other Meth Helper-like messages from your peers.",
 	"everythingmeth_msg_prefix_mode_title" : "Public Message Prefix",
