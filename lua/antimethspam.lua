@@ -13,7 +13,7 @@ local common_patterns = {
 --why
 local original_receive_message = ChatManager._receive_message
 function ChatManager:_receive_message(channel_id, name, message, ...)
-    if (EverythingMeth.settings.anti_spam and (name ~= managers.network:session():local_peer():name() and name ~= "[" .. EverythingMeth:LocalizeLine("prefix") .. "]")) then
+    if (EverythingMeth:IsEnabled() and EverythingMeth.settings.anti_spam and (name ~= managers.network:session():local_peer():name() and name ~= "[" .. EverythingMeth:LocalizeLine("prefix") .. "]")) then
         for _, pattern in pairs(common_patterns) do
             if (message:lower():match(pattern)) then
                 return false

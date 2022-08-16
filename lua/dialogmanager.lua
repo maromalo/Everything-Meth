@@ -137,7 +137,7 @@ end
 
 local SE_interact_original = ObjectInteractionManager.interact
 function ObjectInteractionManager:interact(player)
-	if EverythingMeth.settings.meth_manager_enabled then
+	if EverythingMeth:IsEnabled() and EverythingMeth.settings.meth_manager_enabled then
 		if not EverythingMeth:can_self_interact(_G.LuaNetworking:LocalPeerID(), self._active_unit) then
 			managers.hud:show_hint({text = EverythingMeth:LocalizeLine("fail"), time = 3})
 			return false
@@ -147,7 +147,7 @@ function ObjectInteractionManager:interact(player)
 end
 
 Hooks:PostHook(UnitNetworkHandler, "sync_teammate_progress", "EverythingMeth_UnitNetworkHandler", function(self, type_index, enabled, tweak_data_id, timer, success, sender)
-	if not EverythingMeth.settings.meth_manager_enabled or not _G.LuaNetworking:IsHost() or type_index ~= 1 or success == true then
+	if not EverythingMeth:IsEnabled() or not EverythingMeth.settings.meth_manager_enabled or not _G.LuaNetworking:IsHost() or type_index ~= 1 or success == true then
 		return
 	end
 	local peer = self._verify_sender(sender)
