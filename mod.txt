@@ -3,7 +3,7 @@
 	"description" : "A fork of Meth Helper Updated with some extra functions, like wrong ingredient prevention, smoke removal, and more.",
 	"author" : "Maromalo",
 	"contact" : "Maromalo",
-	"version" : "1.21",
+	"version" : "1.22",
 	"blt_version" : 2,
 	"image" : "emsq.png",
 	"color" : "0 162 232",
