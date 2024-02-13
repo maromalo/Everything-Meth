@@ -1,3 +1,7 @@
+13/2/24 - v1.22
+- Fixed fatal error (thank you lnx00!)
+- Finished russian translation (thank you InTostor!)
+
 14/8/22 - v1.21
 - Ingredient Contours no longer needs BeardLib, and only requires a map restart
 - Added BLT updates
