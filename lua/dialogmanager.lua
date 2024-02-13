@@ -32,61 +32,64 @@ EverythingMeth.disallowedIngredientsUnit = {}
 EverythingMeth.disallowedIngredientsTextId = {}
 EverythingMeth._last_state = {}
 
-local original_queue_dialog = DialogManager.queue_dialog
---Hooks:PostHook(DialogManager,"queue_dialog","DialogManagerQueueDialog_EverythingMeth",function(self,id,params)
-function DialogManager:queue_dialog(id, ...)
-	if not EverythingMeth:IsEnabled() then 
-		--everythingmeth is set to disabled in mod options, so do nothing
-		return original_queue_dialog(self, id, ...)
-	end
-	local line_type = dialog_ids[tostring(id)]
-	if not line_type then 
-		--line is not on the list of catalogued meth cooking lines, so do nothing
-		return original_queue_dialog(self, id, ...)
-	end
-	local chatmode,hintmode
-	local output
-	if (line_type == "mu") or (line_type == "cs") or (line_type == "hcl") then
-
-		if EverythingMeth.settings.meth_manager_enabled then
-			EverythingMeth.disallowedIngredientsUnit = {}
-			EverythingMeth.disallowedIngredientsTextId = {}
-			for k, v in pairs(EverythingMeth.disallowedIngredientsTable) do
-				if k ~= line_type then
-					table.insert(EverythingMeth.disallowedIngredientsUnit, v["unit"])
-					table.insert(EverythingMeth.disallowedIngredientsTextId, v["textid"])
+--[[ DialogManager Hook ]]
+if DialogManager ~= nil then
+	local original_queue_dialog = DialogManager.queue_dialog
+	--Hooks:PostHook(DialogManager,"queue_dialog","DialogManagerQueueDialog_EverythingMeth",function(self,id,params)
+	function DialogManager:queue_dialog(id, ...)
+		if not EverythingMeth:IsEnabled() then 
+			--everythingmeth is set to disabled in mod options, so do nothing
+			return original_queue_dialog(self, id, ...)
+		end
+		local line_type = dialog_ids[tostring(id)]
+		if not line_type then 
+			--line is not on the list of catalogued meth cooking lines, so do nothing
+			return original_queue_dialog(self, id, ...)
+		end
+		local chatmode,hintmode
+		local output
+		if (line_type == "mu") or (line_type == "cs") or (line_type == "hcl") then
+	
+			if EverythingMeth.settings.meth_manager_enabled then
+				EverythingMeth.disallowedIngredientsUnit = {}
+				EverythingMeth.disallowedIngredientsTextId = {}
+				for k, v in pairs(EverythingMeth.disallowedIngredientsTable) do
+					if k ~= line_type then
+						table.insert(EverythingMeth.disallowedIngredientsUnit, v["unit"])
+						table.insert(EverythingMeth.disallowedIngredientsTextId, v["textid"])
+					end
 				end
 			end
-		end
-
-		chatmode,hintmode = EverythingMeth:GetOutputType("ingred")
-		if (line_type ~= EverythingMeth._last_ingredient) or EverythingMeth:ShouldRepeatIngredients() then 
-			output = EverythingMeth:LocalizeLine(line_type)
-		end
-		EverythingMeth._last_ingredient = line_type
-	elseif (line_type == "fail") or (line_type == "added") or (line_type == "done") then 
-		chatmode,hintmode = EverythingMeth:GetOutputType(line_type)
-		output = EverythingMeth:LocalizeLine(line_type)
-		EverythingMeth._last_ingredient = line_type
-	end
 	
-	if output then 
-		local private_prefix = "[" .. EverythingMeth:LocalizeLine("prefix") .. "]"
-		local color = Color("5FE1FF") --cyan
-		if chatmode == 3 then 
-			--nothing
-		elseif chatmode == 1 or (EverythingMeth.settings.host_only_pmsg and not _G.LuaNetworking:IsHost()) then 
-			managers.chat:_receive_message(1,private_prefix,output,color)
-		elseif chatmode == 2 then 
-			managers.chat:send_message(ChatManager.GAME, managers.network.account:username() or "Offline", EverythingMeth.settings.msg_prefix .. output)
+			chatmode,hintmode = EverythingMeth:GetOutputType("ingred")
+			if (line_type ~= EverythingMeth._last_ingredient) or EverythingMeth:ShouldRepeatIngredients() then 
+				output = EverythingMeth:LocalizeLine(line_type)
+			end
+			EverythingMeth._last_ingredient = line_type
+		elseif (line_type == "fail") or (line_type == "added") or (line_type == "done") then 
+			chatmode,hintmode = EverythingMeth:GetOutputType(line_type)
+			output = EverythingMeth:LocalizeLine(line_type)
+			EverythingMeth._last_ingredient = line_type
 		end
-		if hintmode then 
-			managers.hud:show_hint({text = output})
+		
+		if output then 
+			local private_prefix = "[" .. EverythingMeth:LocalizeLine("prefix") .. "]"
+			local color = Color("5FE1FF") --cyan
+			if chatmode == 3 then 
+				--nothing
+			elseif chatmode == 1 or (EverythingMeth.settings.host_only_pmsg and not _G.LuaNetworking:IsHost()) then 
+				managers.chat:_receive_message(1,private_prefix,output,color)
+			elseif chatmode == 2 then 
+				managers.chat:send_message(ChatManager.GAME, managers.network.account:username() or "Offline", EverythingMeth.settings.msg_prefix .. output)
+			end
+			if hintmode then 
+				managers.hud:show_hint({text = output})
+			end
 		end
-	end
-
-	if EverythingMeth.settings.ingred_lines then
-		return original_queue_dialog(self, id, ...)
+	
+		if EverythingMeth.settings.ingred_lines then
+			return original_queue_dialog(self, id, ...)
+		end
 	end
 end
 
@@ -134,37 +137,42 @@ function EverythingMeth:untase_player(peer_id)
 	end
 end
 
-
-local SE_interact_original = ObjectInteractionManager.interact
-function ObjectInteractionManager:interact(player)
-	if EverythingMeth.settings.meth_manager_enabled then
-		if not EverythingMeth:can_self_interact(_G.LuaNetworking:LocalPeerID(), self._active_unit) then
-			managers.hud:show_hint({text = EverythingMeth:LocalizeLine("fail"), time = 3})
-			return false
-		end
-	end
-	return SE_interact_original(self, player)
-end
-
-Hooks:PostHook(UnitNetworkHandler, "sync_teammate_progress", "EverythingMeth_UnitNetworkHandler", function(self, type_index, enabled, tweak_data_id, timer, success, sender)
-	if not EverythingMeth.settings.meth_manager_enabled or not _G.LuaNetworking:IsHost() or type_index ~= 1 or success == true then
-		return
-	end
-	local peer = self._verify_sender(sender)
-	local peer_id = peer and peer:id()
-
-	if peer_id then
-		if not EverythingMeth:can_peer_interact(peer_id, tweak_data_id) then
-			if enabled == true then
-				managers.hud:show_hint({text = tostring(peer:name()) .. EverythingMeth:LocalizeLine("teamfail"), time = 3})
-				EverythingMeth:send_message_to_peer(peer, EverythingMeth:LocalizeLine("fail"))
-				EverythingMeth:tase_player(peer_id) --tased in order to prevent a peer from adding the wrong ingredient
-			else
-				EverythingMeth:untase_player(peer_id)
+--[[ ObjectInteractionManager Hook ]]
+if ObjectInteractionManager ~= nil then
+	local SE_interact_original = ObjectInteractionManager.interact
+	function ObjectInteractionManager:interact(player)
+		if EverythingMeth.settings.meth_manager_enabled then
+			if not EverythingMeth:can_self_interact(_G.LuaNetworking:LocalPeerID(), self._active_unit) then
+				managers.hud:show_hint({text = EverythingMeth:LocalizeLine("fail"), time = 3})
+				return false
 			end
 		end
+		return SE_interact_original(self, player)
 	end
-end)
+end
+
+--[[ UnitNetworkHandler Hook ]]
+if UnitNetworkHandler ~= nil then
+	Hooks:PostHook(UnitNetworkHandler, "sync_teammate_progress", "EverythingMeth_UnitNetworkHandler", function(self, type_index, enabled, tweak_data_id, timer, success, sender)
+		if not EverythingMeth.settings.meth_manager_enabled or not _G.LuaNetworking:IsHost() or type_index ~= 1 or success == true then
+			return
+		end
+		local peer = self._verify_sender(sender)
+		local peer_id = peer and peer:id()
+	
+		if peer_id then
+			if not EverythingMeth:can_peer_interact(peer_id, tweak_data_id) then
+				if enabled == true then
+					managers.hud:show_hint({text = tostring(peer:name()) .. EverythingMeth:LocalizeLine("teamfail"), time = 3})
+					EverythingMeth:send_message_to_peer(peer, EverythingMeth:LocalizeLine("fail"))
+					EverythingMeth:tase_player(peer_id) --tased in order to prevent a peer from adding the wrong ingredient
+				else
+					EverythingMeth:untase_player(peer_id)
+				end
+			end
+		end
+	end)
+end
 
 --[[	Other voicelines: (paraphrasing most)
 	Play_loc_mex_cook_##:
